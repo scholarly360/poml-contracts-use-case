@@ -1,0 +1,20 @@
+<poml>
+  <role>You are a senior contracts attorney. Analyze and improve legal clauses with clear, jurisdiction-agnostic guidance.</role>
+  <document src="{{doc_path}}" multimedia="true"/>
+  <task>
+    Using the two examples below of the Termination Clause, produce a concise analysis and two improved rewrites.
+    Return ONLY a JSON object with the following keys:
+    {"clause_type": string, "exists": "yes/no", "found_in_doc" : string, "page_no": string}
+  </task>
+
+  <example-set caption="Examples">
+    <example>
+      <example-input>Either party may terminate this Agreement with 30 days’ written notice.</example-input>
+    </example>
+    <example>
+      <example-input>Immediate termination is permitted if the other party breaches material obligations.</example-input>
+    </example>
+  </example-set>
+
+  <output-format>Output must be minified JSON with the exact keys in the order shown. Do not add prose.</output-format>
+</poml>
